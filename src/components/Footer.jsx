@@ -9,7 +9,7 @@ import {
 
 export default function FooterComponent() {
   return (
-    <footer className="border border-t-8 border-teal-500 py-8 bg-gray-100 rounded-2xl">
+    <footer className="border ml-64 border-t-8 border-teal-500 py-8 bg-gray-100 rounded-2xl">
       <div className="container justify-center  mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">

@@ -137,7 +137,7 @@ export default function CreateListing() {
   }
 
   return (
-    <main className="max-w-xl px-2 mx-auto">
+    <main className="max-w-xl px-2 ml-64 mx-auto">
       <h1 className=" text-3xl text-center mt-8 text-green-900">
         Create Listing
       </h1>

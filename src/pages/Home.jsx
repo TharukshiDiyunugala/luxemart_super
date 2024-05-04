@@ -91,7 +91,7 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main className="ml-64">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"

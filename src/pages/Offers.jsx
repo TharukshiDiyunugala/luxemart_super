@@ -227,11 +227,6 @@ export default function Offers() {
     fetchListings();
   });
 
-
-
-
-
-
   if (!vegProducts) {
     return <Spinner />;
   }
@@ -239,19 +234,8 @@ export default function Offers() {
     return <Spinner />;
   }
 
-
-
-
-
-
-
-
-
-
-
-
   return(
-    <main>
+    <main className="ml-64">
       <div>
         <h1 className="text-2xl font-semibold text-center text-green-900 mt-15 my-8">Products under the Categories</h1>
       </div>

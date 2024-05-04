@@ -14,6 +14,7 @@ import CreateListing from './pages/CreateListing';
 import EditListing from './pages/EditListing';
 import Listing from './pages/Listing';
 import Footer from './components/Footer';
+import TopHeader from './components/TopHeader';
 
 
 
@@ -23,6 +24,7 @@ function App() {
    <>
   <Router>
     <Header />
+    <TopHeader/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/sign-in" element={<SignIn />} />

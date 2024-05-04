@@ -46,7 +46,7 @@ export default function Listing() {
   }
   // return <div>{product.title}</div>
   return (
-    <main className="">
+    <main className="ml-64">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"
