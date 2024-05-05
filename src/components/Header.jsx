@@ -27,9 +27,9 @@ export default function Header() {
 
     
   return (
-    <div className="fixed left-0 top-70px w-64 p-4 h-full bg-gray-600 border-b shadow-sm z-50 sidebar-menu transition-transform">
+    <div className="fixed left-0 top-60px h-full overflow-y-auto w-64 p-4 bg-gray-600 border-b shadow-sm z-50 sidebar-menu transition-transform">
         <header className="justify-between items-center px-3 max-w-6xl mx-auto">
-        <div>
+        {/* <div>
         <a href="/" className="flex items-center pb-4 ">
           <img
             src="../assets/logo1.png"
@@ -39,7 +39,7 @@ export default function Header() {
           />
           <span className="text-lg font-bold text-white ml-3">LuxeMart</span>
           </a>
-        </div>
+        </div> */}
         <div>
             <ul className="mt-4">
 
