@@ -6,8 +6,9 @@ import Nav from './Nav';
 
 function TopHeader() {
   return (
-    <div className="header">
-    <header className="align-items-center flex fixed-top w-full justify-align-center">
+    <div className="header" >
+    <header className="fixed align-items-center flex w-full justify-align-center" style={{ backgroundColor: '#c5c3c7', height: '50px'  }}>
+          
        <Logo/>
        <SearchBar/>
        <Nav/>

@@ -3,9 +3,9 @@ import profileImg from '../assets/user.png'
 
 const NavAvatar = () => {
   return (
-    <li className='nav-item dropdown pe-3'>
+    <li className='nav-item dropdown pe-5'>
         <a
-        className='nav-link nav-profile d-flex align-items-center pe-0'
+        className='nav-link nav-profile flex align-items-center pe-0'
         href='#'
         data-bs-toggle='dropdown'
         >

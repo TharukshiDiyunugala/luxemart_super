@@ -1,0 +1,16 @@
+@media (max-width:1199px){
+    .toggle-sidebar .sidebar{
+        left:0;
+    }
+}
+
+@media (max-width:1200px){
+    .toggle-sidebar #main,
+    .toggle-sidebar #footer{
+        margin-left:0;
+    }
+
+    .toggle-sidebar .sidebar{
+        left:-300px;
+    }
+}

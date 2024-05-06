@@ -8,7 +8,7 @@ const Logo = () => {
     return (
         <div className='flex items-center justify-between'>
             <a href="/" className='logo flex items-center'>
-                <span className='d-none d-lg-block'>LuxeMart</span>
+                <span className='ml-20 d-none d-lg-block'>LuxeMart</span>
                 
             </a>
             

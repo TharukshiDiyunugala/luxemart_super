@@ -6,7 +6,7 @@ import NavAvatar from './NavAvatar';
 
 const Nav = () => {
   return (
-    <nav className='header-nav ms-auto mt-6'>
+    <nav className='header-nav ms-auto mt-3'>
     <ul className='flex align-items-center justify-center'>
         <NavNotice/>
         <NavMessage/>
