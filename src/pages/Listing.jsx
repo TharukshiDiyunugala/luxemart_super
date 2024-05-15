@@ -15,11 +15,11 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
-import { getAuth } from "firebase/auth";
+//import { getAuth } from "firebase/auth";
 
 export default function Listing() {
   const params = useParams();
-  const auth = getAuth();
+  //const auth = getAuth();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -46,7 +46,7 @@ export default function Listing() {
   }
   // return <div>{product.title}</div>
   return (
-    <main className="ml-64">
+    <main >
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"

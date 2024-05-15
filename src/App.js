@@ -14,8 +14,7 @@ import CreateListing from './pages/CreateListing';
 import EditListing from './pages/EditListing';
 import Listing from './pages/Listing';
 import Footer from './components/Footer';
-import TopHeader from './components/TopHeader';
-import AddProducts from './pages/AddProducts';
+
 
 
 
@@ -23,7 +22,7 @@ function App() {
   return (
    <>
   <Router>
-  <TopHeader/>
+  
     <Header />
     
     <Routes>
@@ -46,7 +45,7 @@ function App() {
       <Route path="/offers" element={<Offers />} />
       <Route path="/category/:category/:id" element={<Listing />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path = '/add-products' element={<AddProducts/>} />
+     
     
     </Routes>
 

@@ -93,7 +93,7 @@ export default function Profile() {
 
   return (
     <>
-      <section className="max-w-6xl ml-64 mx-auto flex justify-center items-center flex-col">
+      <section className="max-w-6xl  mx-auto flex justify-center items-center flex-col">
         <h1 className="text-3xl text-center mt-6 text-green-900">
           Your Profile
         </h1>

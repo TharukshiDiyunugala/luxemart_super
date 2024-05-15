@@ -235,7 +235,7 @@ export default function Offers() {
   }
 
   return(
-    <main className="ml-64">
+    <main >
       <div>
         <h1 className="text-2xl font-semibold text-center text-green-900 mt-15 my-8">Products under the Categories</h1>
       </div>
