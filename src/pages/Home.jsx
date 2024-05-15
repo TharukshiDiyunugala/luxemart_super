@@ -110,11 +110,11 @@ export default function Home() {
     <main>
       <section ><p><ImageSwipper/></p></section>
 
-      <div className="mt-5">
-        <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-3xl text-green-800 font-bold lg:text-6xl">
+      <div className="mt-1">
+        <div className="flex flex-col gap-3 p-28 px-3 max-w-6xl mx-auto">
+        <h1 className="text-3xl text-black-300 font-bold lg:text-6xl">
             {renderAnimatedText("Welcome to ", 1)}
-            <span className="text-teal-500">
+            <span className=" text-green-600">
               {renderAnimatedText("Luxemart", 10)}
             </span>
             {renderAnimatedText(" Family!!", 16)}
@@ -122,15 +122,17 @@ export default function Home() {
           <p className="text-gray-500 text-xs sm:text-sm">
             "Embark on a journey of discovery with Luxemart Supermarket's Admin Panel, where efficiency meets convenience. Navigate through a seamless interface designed for supermarket staff, enabling effortless product management. Whether you're restocking shelves, updating prices, or fine-tuning inventory, our platform provides the tools you need to streamline operations and elevate your supermarket experience. Join us in revolutionizing the way you manage inventory, one click at a time."
           </p>
-          <Link to="/profile" className="text-xs sm:text-sm text-gray-700 font-bold hover:underline">
-            For handle products
+          <div className="flex justify-start mt-12 px-4 md:px-20">
+          <Link to="/profile" className="custom-link">
+          <div className="flex text-lg md:text-l">Manage products</div> 
           </Link>
+          </div>
         </div>
         <></>
-        <div className="max-w-6xl px-3 mt-6 mx-auto">
+        <div className="max-w-6xl px-3 mt--1 mx-auto">
         {!loading && products.length>0 && (
           <>
-          <h2 className="text-3xl mb-20 text-green-600 lg:text-4xl text-center">All Products</h2>
+          <h2 className="text-3xl mb-10 font-semibold text-black-600 lg:text-4xl text-center">All Products</h2>
             
             <ul className="sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4">
               {products.map((product) => (  
@@ -145,7 +147,7 @@ export default function Home() {
             <div className="flex justify-center items-center">
               <button
                 onClick={onFetchMoreProducts}
-                className="bg-white px-3 py-1.5 text-gray-700 border border-gray-300 mb-6 mt-6 hover:border-slate-600 rounded transition duration-150 ease-in-out"
+                className="bg-white px-3 py-1.5 text-gray-900 border border-gray-300 mb-6 mt-6 hover:border-slate-600 rounded transition duration-150 ease-in-out"
               >
                 Load more
               </button>

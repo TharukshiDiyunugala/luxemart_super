@@ -15,6 +15,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
+import './listing.css'
 //import { getAuth } from "firebase/auth";
 
 export default function Listing() {
@@ -71,8 +72,8 @@ export default function Listing() {
         </SwiperSlide>
       </Swiper>
       
-      <div className="bg-white md:flex-row  mt-20 mb-20 px-6 py-12 max-w-6xl lg:mx-auto  shadow-xl hover:shadow-2xl rounded-md">
-  <div className="text-center mb-3">
+    <div className="custom-frame bg-white md:flex-row mt-20 mb-20 px-6 py-12 max-w-6xl lg:mx-auto shadow-xl hover:shadow-2xl rounded-md">
+ <div className="text-center mb-3">
     <h1 className="text-3xl text-green-800 font-semibold">{product.title}</h1>
   </div>
   <div className="flex flex-col md:flex-row justify-center items-center">
@@ -80,7 +81,7 @@ export default function Listing() {
       <p className="text-lg mb-5">
         <span className="text-green-950 font-semibold">About Product: </span>
         {product.description}
-      </p>
+      </p>a
       <p className="text-[#3848b3] mt-2 text-md">
         Price: Rs. {product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.00
       </p>
