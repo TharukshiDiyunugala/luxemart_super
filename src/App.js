@@ -14,7 +14,7 @@ import CreateListing from './pages/CreateListing';
 import EditListing from './pages/EditListing';
 import Listing from './pages/Listing';
 import Footer from './components/Footer';
-
+import About from './pages/About';
 
 
 
@@ -29,6 +29,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/about" element={<About />} />
 
       <Route path='/profile' element={<PrivateRoute/>}>
       <Route path="/profile" element={<Profile />} />

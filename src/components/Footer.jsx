@@ -9,13 +9,13 @@ import {
 
 export default function FooterComponent() {
   return (
-    <footer className="border ml-64 border-t-8 border-teal-500 py-8 bg-gray-100 rounded-2xl">
-      <div className="container justify-center  mx-auto px-4">
+    <footer className="bg-green-800 text-white py-8">
+      <div className="container justify-center mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">
             <Link
               to="/"
-              className="text-sm sm:text-xl font-semibold text-green-900"
+              className="text-sm sm:text-xl font-semibold text-green-100"
             >
               <span className="px-2 py-1 bg-gradient-to-r from-green-900 via-green-700 to-green-400 rounded-lg text-white">
                 LUXEMART
@@ -24,10 +24,10 @@ export default function FooterComponent() {
             </Link>
           </div>
           <div></div>
-          <div className="flex flex-row justify-end gap-4 md:gap-8 text-gray-900 items-end lg-flex-col ">
+          <div className="flex flex-row justify-end gap-4 md:gap-8">
             <div className="ml-auto">
-              <h3 className="font-semibold">About</h3>
-              <ul >
+              <h3 className="font-semibold ">About</h3>
+              <ul>
                 <li className="hover:text-green-500">
                   <a
                     href="/about"
@@ -39,21 +39,21 @@ export default function FooterComponent() {
                 </li>
                 <li className="hover:text-green-500">
                   <a
-                    href="/luxemart" 
+                    href="/luxemart"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                   Luxemart Super
+                    Luxemart Super
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold">Follow us</h3>
-              <ul >
+              <ul>
                 <li className="hover:text-green-500">
                   <a
-                    href="https://github.com" 
+                    href="https://github.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -75,10 +75,10 @@ export default function FooterComponent() {
               <h3 className="font-semibold">Legal</h3>
               <ul>
                 <li className="hover:text-green-500">
-                  <a href="/privacy-policy">Privacy Policy</a> 
+                  <a href="/privacy-policy">Privacy Policy</a>
                 </li>
                 <li className="hover:text-green-500">
-                  <a href="/terms">Terms & Conditions</a> 
+                  <a href="/terms">Terms & Conditions</a>
                 </li>
               </ul>
             </div>
@@ -86,8 +86,8 @@ export default function FooterComponent() {
         </div>
         <hr className="my-8 border-gray-300" />
         <div className="flex justify-center items-center">
-          <span className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()}  Luxemart Super
+          <span className="text-black text-sm">
+            &copy; {new Date().getFullYear()} Luxemart Super
           </span>
           <div className="flex gap-6 ml-8">
             <a

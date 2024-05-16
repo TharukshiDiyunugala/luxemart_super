@@ -138,9 +138,6 @@ export default function CreateListing() {
 
   return (
     <main className="max-w-xl px-2 mx-auto">
-      <h1 className=" text-3xl text-center mt-8 text-green-900">
-        Create Listing
-      </h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title" className="block mt-4 text-green-900">
           Title

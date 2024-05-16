@@ -12,14 +12,14 @@ import ListingItem from '../components/ListingItems'
 
 export default function Offers() {
   const [vegProducts, setVegProducts] = useState(null);
-  const[meatProducts,setMeatProducts]=useState(null);
-  const[beveragesProducts,setBeveragesProducts]=useState(null);
-  const[desertsProducts,setDesertsProducts]=useState(null);
-  const[snacksProducts,setSnacksProducts]=useState(null);
-  const[educationalProducts,setEducationalProducts]=useState(null);
-  const[beautyProducts,setBeautyProducts]=useState(null);
+  const [meatProducts, setMeatProducts] = useState(null);
+  const [beveragesProducts, setBeveragesProducts] = useState(null);
+  const [desertsProducts, setDesertsProducts] = useState(null);
+  const [snacksProducts, setSnacksProducts] = useState(null);
+  const [educationalProducts, setEducationalProducts] = useState(null);
+  const [beautyProducts, setBeautyProducts] = useState(null);
 
-  
+
 
 
   // Fetching the vegitables products
@@ -31,8 +31,8 @@ export default function Offers() {
         // create the query
         const q = query(
           productRef,
-          where("category", "==", 
-          "Vegetables"),
+          where("category", "==",
+            "Vegetables"),
           orderBy("timestamp", "desc")
         );
         // execute the query
@@ -52,7 +52,7 @@ export default function Offers() {
     fetchListings();
   }, []);
   // Fetching the meat products
- useEffect(() => {
+  useEffect(() => {
     async function fetchListings() {
       try {
         // get reference
@@ -60,8 +60,8 @@ export default function Offers() {
         // create the query
         const q = query(
           productRef,
-          where("category", "==", 
-          "Meats"),
+          where("category", "==",
+            "Meats"),
           orderBy("timestamp", "desc")
         );
         // execute the query
@@ -74,7 +74,7 @@ export default function Offers() {
           });
         });
         setMeatProducts(products);
-    
+
       } catch (error) {
         console.log(error);
       }
@@ -90,8 +90,8 @@ export default function Offers() {
         // create the query
         const q = query(
           productRef,
-          where("category", "==", 
-          "Beverages"),
+          where("category", "==",
+            "Beverages"),
           orderBy("timestamp", "desc")
         );
         // execute the query
@@ -119,8 +119,8 @@ export default function Offers() {
         // create the query
         const q = query(
           productRef,
-          where("category", "==", 
-          "Deserts"),
+          where("category", "==",
+            "Deserts"),
           orderBy("timestamp", "desc")
         );
         // execute the query
@@ -148,8 +148,8 @@ export default function Offers() {
         // create the query
         const q = query(
           productRef,
-          where("category", "==", 
-          "Snacks"),
+          where("category", "==",
+            "Snacks"),
           orderBy("timestamp", "desc")
         );
         // execute the query
@@ -178,7 +178,7 @@ export default function Offers() {
         const q = query(
           productRef,
           where("category", "==",
-          "Educational"),
+            "Educational"),
           orderBy("timestamp", "desc")
         );
         // execute the query
@@ -207,7 +207,7 @@ export default function Offers() {
         const q = query(
           productRef,
           where("category", "==",
-          "Beauty"),
+            "Beauty"),
           orderBy("timestamp", "desc")
         );
         // execute the query
@@ -234,16 +234,27 @@ export default function Offers() {
     return <Spinner />;
   }
 
-  return(
+  return (
     <main >
       <div>
         <h1 className="text-2xl font-semibold text-center text-green-900 mt-15 my-8">Products under the Categories</h1>
+        <a href="https://t3.ftcdn.net/jpg/06/64/18/04/240_F_664180414_GJyNYnKTQL8BYPXpkWLVgV2CSbhOwpZe.jpg" target="_blank" rel="noopener noreferrer">
+          <div className="w-full h-64">
+            <img
+              src="https://t3.ftcdn.net/jpg/06/64/18/04/240_F_664180414_GJyNYnKTQL8BYPXpkWLVgV2CSbhOwpZe.jpg"
+              alt="Category Banner"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </a>
+
+
       </div>
       <div className="max-w-6xl px-3 mt-6 mx-auto">
-      {vegProducts && vegProducts.length > 0 && (
+        {vegProducts && vegProducts.length > 0 && (
           <div className="m-2 mb-6">
             <h2 className="px-3 text-xl mt-6 text-center text-green-700 mb-10" >vegitables</h2>
-         
+
             <ul className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
               {vegProducts.map((product) => (
                 <ListingItem
@@ -339,9 +350,9 @@ export default function Offers() {
             </ul>
           </div>
         )}
-        
 
-      
+
+
       </div>
     </main>
   )

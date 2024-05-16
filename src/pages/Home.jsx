@@ -129,7 +129,7 @@ export default function Home() {
           </div>
         </div>
         <></>
-        <div className="max-w-6xl px-3 mt--1 mx-auto">
+        <div className="max-w-6xl px-3 mt--1 mx-auto mb-8">
         {!loading && products.length>0 && (
           <>
           <h2 className="text-3xl mb-10 font-semibold text-black-600 lg:text-4xl text-center">All Products</h2>
@@ -147,7 +147,8 @@ export default function Home() {
             <div className="flex justify-center items-center">
               <button
                 onClick={onFetchMoreProducts}
-                className="bg-white px-3 py-1.5 text-gray-900 border border-gray-300 mb-6 mt-6 hover:border-slate-600 rounded transition duration-150 ease-in-out"
+                className="custom-link mb-10"
+               
               >
                 Load more
               </button>

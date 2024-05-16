@@ -18,10 +18,10 @@ export default function ListingItems({ products, id,onEdit,onDelete }) {
         {products.timestamp?.toDate()}
         </Moment>
         <div className="w-full p-[10px]">
-         <p className='font-semibold m-0 text-xl truncate'>{products.title}</p>
-         <p className='text-[#2c4d3a] mt-2 text-m'>Price:Rs. {products.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.00</p>
-         <p id="discountPrice" className='text-[#e53d3d] mt-2 text-md'>Discount:Rs. {products.discountPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.00</p>
-            <p>Category: <span className='text-[#38b33a] mt-2 text-m'>{products.category}</span></p>
+         <p className='font-semibold m-0 text-xl text-center truncate'>{products.title}</p>
+         <p className='text-[#2c4d3a] mt-3 text-m'>Price : Rs. {products.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.00</p>
+         <p id="discountPrice" className='text-[#e53d3d] font-bold text-md'>Discount : Rs. {products.discountPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.00</p>
+            <p>Category: <span className='text-[#277622] text-m'>{products.category}</span></p>
         </div>
         
         </div>
