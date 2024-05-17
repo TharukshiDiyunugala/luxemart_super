@@ -110,17 +110,17 @@ export default function Home() {
     <main>
       <section ><p><ImageSwipper/></p></section>
 
-      <div className="mt-1">
-        <div className="flex flex-col gap-3 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-3xl text-black-300 font-bold lg:text-6xl">
+      <div className="mt-1 px-0 sm:px-4">
+        <div className="flex flex-col gap-3 p-28 px-3 max-w-7xl mx-auto">
+        <h1 className="text-3xl text-center text-black-300 font-bold lg:text-6xl">
             {renderAnimatedText("Welcome to ", 1)}
             <span className=" text-green-600">
               {renderAnimatedText("Luxemart", 10)}
             </span>
             {renderAnimatedText(" Family!!", 16)}
           </h1>
-          <p className="text-gray-500 text-xs sm:text-sm">
-            "Embark on a journey of discovery with Luxemart Supermarket's Admin Panel, where efficiency meets convenience. Navigate through a seamless interface designed for supermarket staff, enabling effortless product management. Whether you're restocking shelves, updating prices, or fine-tuning inventory, our platform provides the tools you need to streamline operations and elevate your supermarket experience. Join us in revolutionizing the way you manage inventory, one click at a time."
+          <p className="text-gray-600 mt-5 text-xs sm:text-sm text-justify">
+            Embark on a journey of discovery with Luxemart Supermarket's Admin Panel, where efficiency meets convenience. Navigate through a seamless interface designed for supermarket staff, enabling effortless product management. Whether you're restocking shelves, updating prices, or fine-tuning inventory, our platform provides the tools you need to streamline operations and elevate your supermarket experience. Join us in revolutionizing the way you manage inventory, one click at a time.
           </p>
           <div className="flex justify-start mt-12 px-4 md:px-20">
           <Link to="/profile" className="custom-link">

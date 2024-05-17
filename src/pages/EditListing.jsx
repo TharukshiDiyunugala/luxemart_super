@@ -178,11 +178,12 @@ export default function EditListing() {
   }
 
   return (
-    <main className="max-w-xl px-2 mx-auto">
-      <h1 className=" text-3xl text-center mt-8 text-green-900">
-        Edit Listing
-      </h1>
-      <form onSubmit={handleSubmit}>
+    <main className="relative flex items-center justify-center min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://img.freepik.com/free-photo/person-shopping-with-face-mask_23-2149565225.jpg?t=st=1715954890~exp=1715958490~hmac=e11202041b2a3c94300f9f326aacf24ed18359e285c589ee525b9503b9d76b88&w=1060" }}>
+    <div className="absolute inset-0 bg-black opacity-50"></div>
+   
+      <form onSubmit={handleSubmit} className="relative z-10 mt-20 max-w-xl w-full p-8 bg-white bg-opacity-90 shadow-md rounded-lg mb-20">
+      <h1 className="text-2xl font-bold text-center text-green-700 mb-4">Edit Product</h1>
+      
         <label htmlFor="title" className="block mt-4 text-green-900">
           Title
         </label>
@@ -225,7 +226,7 @@ export default function EditListing() {
             value={true}
             onClick={handleChange}
             className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              !offer ? "bg-white text-black" : "bg-slate-600 text-white"
+              !offer ? "bg-white text-black" : "bg-green-600 text-white"
             }`}
           >
             Yes
@@ -236,7 +237,7 @@ export default function EditListing() {
             value={false}
             onClick={handleChange}
             className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              offer ? "bg-white text-black" : "bg-slate-600 text-white"
+              offer ? "bg-white text-black" : "bg-green-600 text-white"
             }`}
           >
             No
@@ -291,9 +292,9 @@ export default function EditListing() {
         />
         <button
           type="submit"
-          className="mb-6 w-full px-7 py-3 bg-green-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          className="mb-6 w-full px-7 py-3 bg-green-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out"
         >
-          Edit Listing
+          Edit Product
         </button>
       </form>
     </main>

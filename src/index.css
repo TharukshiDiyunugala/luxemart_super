@@ -4,7 +4,7 @@
 
 
 body{
-    background-color: rgb(240,253,244);
+    background-color: rgb(254, 255, 254);
     font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -15,7 +15,7 @@ body{
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
-    background: #a8dadc !important
+    background: #5eb072 !important
 }
 
 html::-webkit-scrollbar{
