@@ -36,19 +36,6 @@ const slideImages = [
 
 export default function ImageSlider() {
 
-  
-  
-    
-
-
-
-
-
-
-
-
-
-
     return (
         <div className="slide-container">
           <Slide>

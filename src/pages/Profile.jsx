@@ -93,10 +93,19 @@ export default function Profile() {
 
   return (
     <>
-      <section className="max-w-6xl mx-auto flex justify-center items-center flex-col">
-        <h1 className="text-3xl text-center mt-6 text-green-900">
-          Your Profile
-        </h1>
+      <section className="max-w-8xl  mx-auto flex justify-center items-center flex-col">
+      <h1 className="text-2xl font-semibold text-center text-green-900 mt-4 my-6">
+  <div className="relative h-64">
+    <img
+      src="https://img.freepik.com/free-photo/side-view-man-buying-watermelon_23-2149729534.jpg?t=st=1715934043~exp=1715937643~hmac=2493c80b96ce850735d7363793681c15fca9486bc9319a394b2bb734f225e2cc&w=1060"
+      alt=" Banner"
+      className="h-full "
+    />
+    <div className="absolute inset-0 flex mt-20 justify-center bg-black bg-opacity-30">
+      <span className="text-white mb-2 text-5xl font-bold ">Profile</span>
+    </div>
+  </div>
+</h1>
         <div className="w-full md:w-[50%] mt-6 px-3">
           <form>
             <input
@@ -105,7 +114,7 @@ export default function Profile() {
               value={userName}
               disabled={!changeDetail}
               onChange={handleChange}
-              className={`mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out ${
+              className={`mb-6 w-full px-4 py-2 text-l text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out ${
                 changeDetail && "bg-red-200 focus:bg-red-200"
               }`}
             />
@@ -115,7 +124,7 @@ export default function Profile() {
               id="email"
               value={email}
               disabled
-              className="mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out"
+              className="mb-6 w-full px-4 py-2 text-l text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out"
             />
 
             <div className="flex justify-between whitespace-nowrap text-sm sm:text-lg mb-6">

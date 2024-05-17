@@ -41,12 +41,12 @@ export default function SignIn() {
   };
 
   return (
-    <section>
-      <h1 className="text-3xl text-center mt-6 text-green-900">Sign In</h1>
+    <section >
+      <h1 className="text-3xl text-center mt-6 font-semibold text-green-800">Sign In</h1>
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
         <div className="md:w-[67%] lg:w-[50%] mb-12 md:mb-6">
           <img
-            src="https://storage.needpix.com/rsynced_images/grocery-2932906_1280.jpg"
+            src="https://img.freepik.com/free-photo/woman-with-tablet-checking-shopping-cart-see-if-she-has-everything-she-needs-lunch_342744-1111.jpg?t=st=1715933141~exp=1715936741~hmac=2e0df2fb0f036ab6c2d1510eaaa786bce57f983f7cdb8401ee5e85f5d538b61c&w=1060"
             alt="key"
             className="w-full rounded-2xl"
           />
@@ -59,7 +59,7 @@ export default function SignIn() {
               value={email}
               onChange={handleChange}
               placeholder="Email address"
-              className="mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
+              className="mb-6 w-full px-4 py-2 text-l text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
             />
             <div className="relative mb-6">
               <input
@@ -68,16 +68,16 @@ export default function SignIn() {
                 value={password}
                 onChange={handleChange}
                 placeholder="password"
-                className="mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
+                className="mb-6 w-full px-4 py-2 text-l text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
               />
               {showPassword ? (
                 <AiFillEyeInvisible
-                  className="absolute right-3 top-3 text-xl cursor-pointer "
+                  className="absolute right-3 top-3 text-l cursor-pointer "
                   onClick={() => setShowPassword((prevState) => !prevState)}
                 />
               ) : (
                 <AiFillEye
-                  className="absolute right-3 top-3 text-xl cursor-pointer"
+                  className="absolute right-3 top-3 text-l cursor-pointer"
                   onClick={() => setShowPassword((prevState) => !prevState)}
                 />
               )}
@@ -96,14 +96,14 @@ export default function SignIn() {
               <p className="text-sm">
                 <Link
                   to="/forgot-password"
-                  className="text-blue-600 hover:text-blue-800 transition duration-200 ease-in-out "
+                  className="text-green-600 hover:text-green-800 transition duration-200 ease-in-out "
                 >
                   Forgot password?
                 </Link>
               </p>
             </div>
             <button
-              className="w-full bg-blue-600 text-white px-7 py-3 text-sm font-medium  rounded shadow-md uppercase hover:bg-blue-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue-800 "
+              className="w-full bg-green-600 text-white px-7 py-3 text-sm font-medium  rounded shadow-md uppercase hover:bg-green-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-green-800 "
               type="submit"
             >
               Sign in

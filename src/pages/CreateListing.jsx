@@ -12,7 +12,7 @@ import { getAuth } from "firebase/auth";
 import { v4 as uuidv4 } from "uuid";
 import { addDoc, serverTimestamp, collection } from "firebase/firestore";
 import { db } from "../firbase";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function CreateListing() {
   const auth = getAuth();
@@ -39,14 +39,14 @@ export default function CreateListing() {
       boolean = false;
     }
 
-    //files
+    // files
     if (e.target.files) {
       setFormData((prevState) => ({
         ...prevState,
         image: e.target.files,
       }));
     }
-    //text, number, select
+    // text, number, select
     if (!e.target.files) {
       setFormData((prevState) => ({
         ...prevState,
@@ -57,8 +57,9 @@ export default function CreateListing() {
       }));
     }
   };
+
   const handleSubmit = async (e) => {
-    e.preventDefault(); //prevent the refreshing
+    e.preventDefault(); // prevent the refreshing
     setLoading(true);
     if (+discountPrice >= +price) {
       setLoading(false);
@@ -120,7 +121,7 @@ export default function CreateListing() {
     };
 
     // console.log(formDataCopy);
-    //complete the database operation
+    // complete the database operation
     delete formDataCopy.image;
     !formDataCopy.offer && delete formDataCopy.discountPrice;
     const docRef = await addDoc(collection(db, "products"), formDataCopy);
@@ -129,22 +130,16 @@ export default function CreateListing() {
     navigate(`/category/${formDataCopy.category}/${docRef.id}`);
   };
 
-  //  useEffect(() => {
-  //     console.log(formData);
-  //   }, [formData]);
   if (loading) {
     return <Spinner />;
   }
 
   return (
-    <main className="max-w-xl px-2 mx-auto">
-      <h1 className=" text-3xl text-center mt-8 text-green-900">
-        Create Listing
-      </h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title" className="block mt-4 text-green-900">
-          Title
-        </label>
+    <main className="relative flex items-center justify-center min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://img.freepik.com/free-photo/different-fresh-vegetables-baskets-counter_132075-5763.jpg?t=st=1715936396~exp=1715939996~hmac=09ef5d7e77ca26381b6272b41a52434d9d8bee73c25777296fc650d009628c1f&w=1060')" }}>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <form onSubmit={handleSubmit} className="relative z-10 mt-20 max-w-xl w-full p-8 bg-white bg-opacity-90 shadow-md rounded-lg mb-20">
+        <h1 className="text-2xl font-bold text-center text-green-700 mb-4">+ Add Product</h1>
+        <label htmlFor="title" className="block mt-4 text-green-900">Title</label>
         <input
           type="text"
           required
@@ -154,9 +149,7 @@ export default function CreateListing() {
           placeholder="Enter the title of the listing"
           className="w-full border p-2 mt-1 rounded-lg"
         />
-        <label htmlFor="description" className="block mt-4 text-green-900">
-          Description
-        </label>
+        <label htmlFor="description" className="block mt-4 text-green-900">Description</label>
         <textarea
           id="description"
           value={description}
@@ -164,9 +157,7 @@ export default function CreateListing() {
           placeholder="Enter the description of the listing"
           className="w-full border p-2 mt-1 rounded-lg"
         />
-        <label htmlFor="price" className="block mt-4 text-green-900">
-          Price(LKR)
-        </label>
+        <label htmlFor="price" className="block mt-4 text-green-900">Price(LKR)</label>
         <input
           type="number"
           id="price"
@@ -184,7 +175,7 @@ export default function CreateListing() {
             value={true}
             onClick={handleChange}
             className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              !offer ? "bg-white text-black" : "bg-slate-600 text-white"
+              !offer ? "bg-white text-black" : "bg-green-500 text-white"
             }`}
           >
             Yes
@@ -195,7 +186,7 @@ export default function CreateListing() {
             value={false}
             onClick={handleChange}
             className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              offer ? "bg-white text-black" : "bg-slate-600 text-white"
+              offer ? "bg-white text-black" : "bg-green-500 text-white"
             }`}
           >
             No
@@ -203,12 +194,7 @@ export default function CreateListing() {
         </div>
         {offer && (
           <>
-            <label
-              htmlFor="discountPrice"
-              className="block mt-4 text-green-900"
-            >
-              Discounted Price(LKR)
-            </label>
+            <label htmlFor="discountPrice" className="block mt-4 text-green-900">Discounted Price(LKR)</label>
             <input
               type="number"
               id="discountPrice"
@@ -219,9 +205,7 @@ export default function CreateListing() {
             />
           </>
         )}
-        <label htmlFor="category" className="block mt-4 text-green-900">
-          Category
-        </label>
+        <label htmlFor="category" className="block mt-4 text-green-900">Category</label>
         <select
           id="category"
           value={category}
@@ -237,9 +221,7 @@ export default function CreateListing() {
           <option value="Educational">Educational</option>
           <option value="Beauty">Beauty</option>
         </select>
-        <label htmlFor="image" className="block mt-4 text-green-900">
-          Image
-        </label>
+        <label htmlFor="image" className="block mt-4 text-green-900">Image</label>
         <input
           type="file"
           id="image"
@@ -250,9 +232,9 @@ export default function CreateListing() {
         />
         <button
           type="submit"
-          className="mb-6 w-full px-7 py-3 bg-green-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          className="mb-6 w-full px-7 py-3 bg-green-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out"
         >
-          Create Listing
+          Add Product
         </button>
       </form>
     </main>
